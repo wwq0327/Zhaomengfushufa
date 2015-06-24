@@ -14,6 +14,9 @@
 		AD1EF2C71B3A2EC600B452E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2C61B3A2EC600B452E3 /* Images.xcassets */; };
 		AD1EF2CA1B3A2EC600B452E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2C81B3A2EC600B452E3 /* LaunchScreen.xib */; };
 		AD1EF2D61B3A2EC600B452E3 /* Zhao_Mengfu_ShufaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2D51B3A2EC600B452E3 /* Zhao_Mengfu_ShufaTests.swift */; };
+		AD1EF2E21B3A2FDE00B452E3 /* xianjufu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2E11B3A2FDE00B452E3 /* xianjufu.jpg */; };
+		AD1EF2E41B3A304400B452E3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2E31B3A304400B452E3 /* ImageViewController.swift */; };
+		AD1EF2E71B3A416600B452E3 /* 兰亭序.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2E61B3A416600B452E3 /* 兰亭序.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		AD1EF2CF1B3A2EC600B452E3 /* Zhao Mengfu ShufaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zhao Mengfu ShufaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1EF2D41B3A2EC600B452E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1EF2D51B3A2EC600B452E3 /* Zhao_Mengfu_ShufaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zhao_Mengfu_ShufaTests.swift; sourceTree = "<group>"; };
+		AD1EF2E11B3A2FDE00B452E3 /* xianjufu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xianjufu.jpg; sourceTree = "<group>"; };
+		AD1EF2E31B3A304400B452E3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		AD1EF2E61B3A416600B452E3 /* 兰亭序.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "兰亭序.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				AD1EF2C11B3A2EC600B452E3 /* MainViewController.swift */,
+				AD1EF2E31B3A304400B452E3 /* ImageViewController.swift */,
 				AD1EF2C31B3A2EC600B452E3 /* Main.storyboard */,
+				AD1EF2E51B3A30DA00B452E3 /* Shufa */,
 				AD1EF2BA1B3A2EC600B452E3 /* Supporting Files */,
 			);
 			path = "Zhao Mengfu Shufa";
@@ -113,6 +121,15 @@
 				AD1EF2D41B3A2EC600B452E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD1EF2E51B3A30DA00B452E3 /* Shufa */ = {
+			isa = PBXGroup;
+			children = (
+				AD1EF2E61B3A416600B452E3 /* 兰亭序.jpg */,
+				AD1EF2E11B3A2FDE00B452E3 /* xianjufu.jpg */,
+			);
+			name = Shufa;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD1EF2C51B3A2EC600B452E3 /* Main.storyboard in Resources */,
+				AD1EF2E71B3A416600B452E3 /* 兰亭序.jpg in Resources */,
+				AD1EF2E21B3A2FDE00B452E3 /* xianjufu.jpg in Resources */,
 				AD1EF2CA1B3A2EC600B452E3 /* LaunchScreen.xib in Resources */,
 				AD1EF2C71B3A2EC600B452E3 /* Images.xcassets in Resources */,
 			);
@@ -217,6 +236,7 @@
 			files = (
 				AD1EF2C21B3A2EC600B452E3 /* MainViewController.swift in Sources */,
 				AD1EF2BD1B3A2EC600B452E3 /* AppDelegate.swift in Sources */,
+				AD1EF2E41B3A304400B452E3 /* ImageViewController.swift in Sources */,
 				AD1EF2C01B3A2EC600B452E3 /* Zhao_Mengfu_Shufa.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
