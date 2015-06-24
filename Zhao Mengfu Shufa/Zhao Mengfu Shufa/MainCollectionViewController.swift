@@ -42,7 +42,7 @@ class MainCollectionViewController: UICollectionViewController {
         headerLabel = FontLabel(fontname: "TpldKhangXiDictTrial", labelText: "赵孟頫书法集", fontSize: 24.0, lineHeight: 5.0)
         headerLabel.center = CGPointMake((screenRect.width - headerLabel.frame.size.width)/2.0+12, 50+headerLabel.frame.size.height/2.0)
         self.view.addSubview(headerLabel)
-        headerLabel.userInteractionEnabled = true
+//        headerLabel.userInteractionEnabled = true
         
         
         // 设置 Cell 的layout
@@ -60,9 +60,6 @@ class MainCollectionViewController: UICollectionViewController {
         self.collectionView?.frame = CGRect(x: 0, y: 0, width: collectionViewWidth, height: itemHeight)
         self.collectionView?.center = CGPoint(x: self.view.frame.size.width/2.0, y: self.view.frame.size.height/2.0)
     }
-
-
-
 }
 
 extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
@@ -89,10 +86,10 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
         return cell
     }
     
-    //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-    //        var leftRightMagrin = (collectionViewWidth - itemWidth)/5
-    //        return UIEdgeInsetsMake(0, leftRightMagrin, 0, leftRightMagrin);
-    //    }
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+//        var leftRightMagrin = (collectionViewWidth - itemWidth)/2
+//        return UIEdgeInsetsMake(0, leftRightMagrin, 0, leftRightMagrin);
+//    }
     
     override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
         let dvc = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.imageViewController) as! ImageViewController

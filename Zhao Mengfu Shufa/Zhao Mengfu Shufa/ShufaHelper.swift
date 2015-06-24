@@ -21,6 +21,7 @@ struct CollectionCellIdentifiers {
 
 struct StoryboardId {
     static let imageViewController = "ImageViewController"
+    static let baikeViewController = "BaikeViewController"
 }
 
 // 创建自定义按钮

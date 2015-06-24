@@ -17,6 +17,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     var buttonFontSize: CGFloat = 18.0
     var backButton: UIButton!
+    var baikeButton: UIButton!
     var buttonsView: UIView!
     
     override func viewDidLoad() {
@@ -59,16 +60,25 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         buttonsView.alpha = 1.0
         
         backButton = fontButtonWith(text: "回", fontSize: buttonFontSize, width: 50.0, normalImageName: "Oval", highlightedImageName: "Oval_pressed")
-        
-        backButton.center = CGPointMake(buttonsView.frame.width/2.0, buttonsView.frame.height/2.0)
+        backButton.center = CGPointMake(buttonsView.frame.width/2.0-56.0, buttonsView.frame.height/2.0)
         backButton.addTarget(self, action: "backToMain", forControlEvents: UIControlEvents.TouchUpInside)
         buttonsView.addSubview(backButton)
+        
+        baikeButton = fontButtonWith(text: "详", fontSize: buttonFontSize, width: 50.0, normalImageName: "Oval", highlightedImageName: "Oval_pressed")
+        baikeButton.center = CGPointMake(backButton.center.x+112.0, backButton.center.y)
+        baikeButton.addTarget(self, action: "baiduBaike", forControlEvents: UIControlEvents.TouchUpInside)
+        buttonsView.addSubview(baikeButton)
         
         self.view.addSubview(buttonsView)
     }
     
     func backToMain() {
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func baiduBaike() {
+        let baikeViewController = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.baikeViewController) as! BaikeViewController
+        self.presentViewController(baikeViewController, animated: true, completion: nil)
     }
     
     func showButtons() {
