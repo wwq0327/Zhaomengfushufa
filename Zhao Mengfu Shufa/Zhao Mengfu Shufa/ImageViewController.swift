@@ -10,13 +10,19 @@ import UIKit
 
 class ImageViewController: UIViewController, UIScrollViewDelegate {
     
+    var imageName: String!
+    
     var imageView: UIImageView!
     var scrollView: UIScrollView!
+    
+    var buttonFontSize: CGFloat = 18.0
+    var backButton: UIButton!
+    var buttonsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView = UIImageView(image: UIImage(named: "兰亭序.jpg"))
+        imageView = UIImageView(image: UIImage(named: imageName))
         scrollView = UIScrollView(frame: view.bounds)
         scrollView.backgroundColor = UIColor.yellowColor()
         scrollView.contentSize = imageView.bounds.size
@@ -31,6 +37,9 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         setZoomScale()
         
+        setupUI()
+        showButtons()
+        
         setupGestureRecognizer()
     }
 
@@ -44,6 +53,27 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         setZoomScale()
     }
     
+    func setupUI() {
+        buttonsView = UIView(frame: CGRectMake(0, screenRect.height, screenRect.width, 80.0))
+        buttonsView.backgroundColor = UIColor.clearColor()
+        buttonsView.alpha = 1.0
+        
+        backButton = fontButtonWith(text: "回", fontSize: buttonFontSize, width: 50.0, normalImageName: "Oval", highlightedImageName: "Oval_pressed")
+        
+        backButton.center = CGPointMake(buttonsView.frame.width/2.0, buttonsView.frame.height/2.0)
+        backButton.addTarget(self, action: "backToMain", forControlEvents: UIControlEvents.TouchUpInside)
+        buttonsView.addSubview(backButton)
+        
+        self.view.addSubview(buttonsView)
+    }
+    
+    func backToMain() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func showButtons() {
+        self.buttonsView.center = CGPointMake(self.buttonsView.center.x, screenRect.height-self.buttonsView.frame.size.height/2.0)
+    }
     // 设置缩放属性
     func setZoomScale() {
         let imageViewSize = imageView.bounds.size

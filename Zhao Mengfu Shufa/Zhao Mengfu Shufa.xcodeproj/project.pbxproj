@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AD1EF2BD1B3A2EC600B452E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2BC1B3A2EC600B452E3 /* AppDelegate.swift */; };
 		AD1EF2C01B3A2EC600B452E3 /* Zhao_Mengfu_Shufa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2BE1B3A2EC600B452E3 /* Zhao_Mengfu_Shufa.xcdatamodeld */; };
-		AD1EF2C21B3A2EC600B452E3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2C11B3A2EC600B452E3 /* MainViewController.swift */; };
 		AD1EF2C51B3A2EC600B452E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2C31B3A2EC600B452E3 /* Main.storyboard */; };
 		AD1EF2C71B3A2EC600B452E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2C61B3A2EC600B452E3 /* Images.xcassets */; };
 		AD1EF2CA1B3A2EC600B452E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2C81B3A2EC600B452E3 /* LaunchScreen.xib */; };
@@ -17,6 +16,13 @@
 		AD1EF2E21B3A2FDE00B452E3 /* xianjufu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2E11B3A2FDE00B452E3 /* xianjufu.jpg */; };
 		AD1EF2E41B3A304400B452E3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2E31B3A304400B452E3 /* ImageViewController.swift */; };
 		AD1EF2E71B3A416600B452E3 /* 兰亭序.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2E61B3A416600B452E3 /* 兰亭序.jpg */; };
+		AD1EF2EA1B3A471700B452E3 /* TpldKhangXiDictTrial.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2E91B3A471700B452E3 /* TpldKhangXiDictTrial.otf */; };
+		AD1EF2EC1B3A472400B452E3 /* Wyue-GutiFangsong-NC_deliverable.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD1EF2EB1B3A472400B452E3 /* Wyue-GutiFangsong-NC_deliverable.otf */; };
+		AD1EF2EE1B3A4A2600B452E3 /* FontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2ED1B3A4A2600B452E3 /* FontLabel.swift */; };
+		AD1EF2F01B3A4A9600B452E3 /* ShufaLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2EF1B3A4A9600B452E3 /* ShufaLayout.swift */; };
+		AD1EF2F21B3A4ADB00B452E3 /* ShufaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F11B3A4ADB00B452E3 /* ShufaHelper.swift */; };
+		AD1EF2F41B3A4B4A00B452E3 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F31B3A4B4A00B452E3 /* MainCollectionViewController.swift */; };
+		AD1EF2F61B3A4B9800B452E3 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +40,6 @@
 		AD1EF2BB1B3A2EC600B452E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1EF2BC1B3A2EC600B452E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD1EF2BF1B3A2EC600B452E3 /* Zhao_Mengfu_Shufa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zhao_Mengfu_Shufa.xcdatamodel; sourceTree = "<group>"; };
-		AD1EF2C11B3A2EC600B452E3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AD1EF2C41B3A2EC600B452E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD1EF2C61B3A2EC600B452E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AD1EF2C91B3A2EC600B452E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -44,6 +49,13 @@
 		AD1EF2E11B3A2FDE00B452E3 /* xianjufu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xianjufu.jpg; sourceTree = "<group>"; };
 		AD1EF2E31B3A304400B452E3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		AD1EF2E61B3A416600B452E3 /* 兰亭序.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "兰亭序.jpg"; sourceTree = "<group>"; };
+		AD1EF2E91B3A471700B452E3 /* TpldKhangXiDictTrial.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TpldKhangXiDictTrial.otf; sourceTree = "<group>"; };
+		AD1EF2EB1B3A472400B452E3 /* Wyue-GutiFangsong-NC_deliverable.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wyue-GutiFangsong-NC_deliverable.otf"; sourceTree = "<group>"; };
+		AD1EF2ED1B3A4A2600B452E3 /* FontLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontLabel.swift; sourceTree = "<group>"; };
+		AD1EF2EF1B3A4A9600B452E3 /* ShufaLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShufaLayout.swift; sourceTree = "<group>"; };
+		AD1EF2F11B3A4ADB00B452E3 /* ShufaHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShufaHelper.swift; sourceTree = "<group>"; };
+		AD1EF2F31B3A4B4A00B452E3 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +97,16 @@
 		AD1EF2B91B3A2EC600B452E3 /* Zhao Mengfu Shufa */ = {
 			isa = PBXGroup;
 			children = (
-				AD1EF2C11B3A2EC600B452E3 /* MainViewController.swift */,
 				AD1EF2E31B3A304400B452E3 /* ImageViewController.swift */,
 				AD1EF2C31B3A2EC600B452E3 /* Main.storyboard */,
+				AD1EF2E81B3A470100B452E3 /* Fonts */,
 				AD1EF2E51B3A30DA00B452E3 /* Shufa */,
 				AD1EF2BA1B3A2EC600B452E3 /* Supporting Files */,
+				AD1EF2ED1B3A4A2600B452E3 /* FontLabel.swift */,
+				AD1EF2EF1B3A4A9600B452E3 /* ShufaLayout.swift */,
+				AD1EF2F11B3A4ADB00B452E3 /* ShufaHelper.swift */,
+				AD1EF2F31B3A4B4A00B452E3 /* MainCollectionViewController.swift */,
+				AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */,
 			);
 			path = "Zhao Mengfu Shufa";
 			sourceTree = "<group>";
@@ -130,6 +147,15 @@
 				AD1EF2E11B3A2FDE00B452E3 /* xianjufu.jpg */,
 			);
 			name = Shufa;
+			sourceTree = "<group>";
+		};
+		AD1EF2E81B3A470100B452E3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AD1EF2EB1B3A472400B452E3 /* Wyue-GutiFangsong-NC_deliverable.otf */,
+				AD1EF2E91B3A471700B452E3 /* TpldKhangXiDictTrial.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD1EF2C51B3A2EC600B452E3 /* Main.storyboard in Resources */,
+				AD1EF2EA1B3A471700B452E3 /* TpldKhangXiDictTrial.otf in Resources */,
 				AD1EF2E71B3A416600B452E3 /* 兰亭序.jpg in Resources */,
+				AD1EF2EC1B3A472400B452E3 /* Wyue-GutiFangsong-NC_deliverable.otf in Resources */,
 				AD1EF2E21B3A2FDE00B452E3 /* xianjufu.jpg in Resources */,
 				AD1EF2CA1B3A2EC600B452E3 /* LaunchScreen.xib in Resources */,
 				AD1EF2C71B3A2EC600B452E3 /* Images.xcassets in Resources */,
@@ -234,10 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD1EF2C21B3A2EC600B452E3 /* MainViewController.swift in Sources */,
+				AD1EF2EE1B3A4A2600B452E3 /* FontLabel.swift in Sources */,
+				AD1EF2F01B3A4A9600B452E3 /* ShufaLayout.swift in Sources */,
 				AD1EF2BD1B3A2EC600B452E3 /* AppDelegate.swift in Sources */,
+				AD1EF2F61B3A4B9800B452E3 /* MainCollectionViewCell.swift in Sources */,
 				AD1EF2E41B3A304400B452E3 /* ImageViewController.swift in Sources */,
 				AD1EF2C01B3A2EC600B452E3 /* Zhao_Mengfu_Shufa.xcdatamodeld in Sources */,
+				AD1EF2F21B3A4ADB00B452E3 /* ShufaHelper.swift in Sources */,
+				AD1EF2F41B3A4B4A00B452E3 /* MainCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
