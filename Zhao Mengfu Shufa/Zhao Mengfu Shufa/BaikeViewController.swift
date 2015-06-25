@@ -18,6 +18,8 @@ class BaikeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBarHidden = false
 
 
         let url = NSURL(string: "http://baike.baidu.com/view/1101771.htm")

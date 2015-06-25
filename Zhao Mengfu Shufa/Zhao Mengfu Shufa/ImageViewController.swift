@@ -77,8 +77,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func baiduBaike() {
-        let baikeViewController = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.baikeViewController) as! BaikeViewController
-        self.presentViewController(baikeViewController, animated: true, completion: nil)
+        let navBaikeViewController = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.navBaike) as! UINavigationController
+        self.presentViewController(navBaikeViewController, animated: true, completion: nil)
     }
     
     func showButtons() {

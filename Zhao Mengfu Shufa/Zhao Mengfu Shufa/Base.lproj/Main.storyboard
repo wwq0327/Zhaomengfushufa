@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="3721" y="377"/>
         </scene>
-        <!--Baike View Controller-->
+        <!--作品详情-->
         <scene sceneID="yXT-UT-wQ0">
             <objects>
                 <viewController storyboardIdentifier="BaikeViewController" id="7Kh-hH-sdw" customClass="BaikeViewController" customModule="Zhao_Mengfu_Shufa" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,8 +82,8 @@
                             <constraint firstItem="6Nj-LG-bvL" firstAttribute="top" secondItem="AtH-J9-t2n" secondAttribute="top" id="pbV-hk-cBn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1oo-cb-18X">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8Du-Nx-ZT8">
+                    <navigationItem key="navigationItem" title="作品详情" id="1oo-cb-18X">
+                        <barButtonItem key="leftBarButtonItem" title="关闭" id="8Du-Nx-ZT8">
                             <connections>
                                 <action selector="closeTapped:" destination="7Kh-hH-sdw" id="ElB-Ld-kLs"/>
                             </connections>
@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lY-a5-tJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4394" y="1136"/>
+            <point key="canvasLocation" x="4533" y="1134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lcf-zh-FaC">
@@ -118,20 +118,23 @@
         <!--Navigation Controller-->
         <scene sceneID="gpM-IX-uJx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eKt-Ak-wrv" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavBaike" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="eKt-Ak-wrv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SiQ-EM-JcQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cAT-iH-vjr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="7Kh-hH-sdw" kind="relationship" relationship="rootViewController" id="Um3-eV-Wzr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufj-n1-zDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3582" y="1136"/>
+            <point key="canvasLocation" x="3721" y="1134"/>
         </scene>
     </scenes>
 </document>

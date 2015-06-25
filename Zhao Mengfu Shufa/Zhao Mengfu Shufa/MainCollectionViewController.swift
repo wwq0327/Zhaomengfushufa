@@ -94,7 +94,6 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let dvc = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.imageViewController) as! ImageViewController
         var filename = shufalists[indexPath.row]["filename"]!
-        println(indexPath.row)
         
         dvc.imageName = filename
         self.navigationController?.pushViewController(dvc, animated: true)
