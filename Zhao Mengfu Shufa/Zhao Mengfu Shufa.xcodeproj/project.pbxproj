@@ -405,6 +405,7 @@
 				INFOPLIST_FILE = "Zhao Mengfu Shufa/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -415,6 +416,7 @@
 				INFOPLIST_FILE = "Zhao Mengfu Shufa/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -471,6 +473,7 @@
 				AD1EF2DB1B3A2EC600B452E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD1EF2DC1B3A2EC600B452E3 /* Build configuration list for PBXNativeTarget "Zhao Mengfu ShufaTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +482,7 @@
 				AD1EF2DE1B3A2EC600B452E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

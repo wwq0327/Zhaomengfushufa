@@ -15,7 +15,7 @@ class MainCollectionViewController: UICollectionViewController {
     let shufalists = [
         ["name": "归去来辞",    "filename": "xianjufu.jpg"],
         ["name": "兰亭序", "filename": "兰亭序.jpg"],
-        ["name": "归去来辞",    "filename": "xianjufu.jpg"],
+        ["name": "闲居赋",    "filename": "xianjufu.jpg"],
         ["name": "兰亭序", "filename": "兰亭序.jpg"],
         ["name": "归去来辞",    "filename": "xianjufu.jpg"],
         ["name": "兰亭序", "filename": "兰亭序.jpg"],
@@ -91,17 +91,13 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
 //        return UIEdgeInsetsMake(0, leftRightMagrin, 0, leftRightMagrin);
 //    }
     
-    override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let dvc = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.imageViewController) as! ImageViewController
         var filename = shufalists[indexPath.row]["filename"]!
+        println(indexPath.row)
         
         dvc.imageName = filename
         self.navigationController?.pushViewController(dvc, animated: true)
     }
-}
 
-//extension MainCollectionViewController: UINavigationControllerDelegate {
-//    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        <#code#>
-//    }
-//}
+}

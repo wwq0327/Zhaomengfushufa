@@ -11,7 +11,7 @@ let screenRect = UIScreen.mainScreen().bounds
 
 // 每个列表只显示三个Cell
 let itemHeight: CGFloat = 150.0 // Cell 的高度
-let itemWidth: CGFloat = 44     // Cell 的宽度
+let itemWidth: CGFloat = 36     // Cell 的宽度
 let collectionViewWidth = itemWidth * 5 // 同时显示三个Cell的时候
 
 

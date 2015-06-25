@@ -19,7 +19,7 @@ class ShufaLayout: UICollectionViewFlowLayout {
         let itemSize = CGSizeMake(itemWidth, itemHeight)
         self.itemSize = itemSize
         self.minimumInteritemSpacing = 0.0
-        self.minimumLineSpacing = 0
+        self.minimumLineSpacing = 10
         self.scrollDirection = .Horizontal
     }
     
