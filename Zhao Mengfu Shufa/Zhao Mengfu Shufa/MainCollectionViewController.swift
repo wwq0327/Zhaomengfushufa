@@ -76,6 +76,7 @@ class MainCollectionViewController: UICollectionViewController {
             }
         } else {
             println("Works.plist already exits at path.")
+            // 调试时，用于删除复制到目录中的文件。
 //            fileManager.removeItemAtPath(path, error: nil)
         }
         
