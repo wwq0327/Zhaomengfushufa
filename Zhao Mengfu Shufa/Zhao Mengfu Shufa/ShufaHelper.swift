@@ -43,3 +43,22 @@ func fontButtonWith(#text: String, #fontSize: CGFloat, #width: CGFloat, #normalI
     
     return button
 }
+
+// :MARK: Paths
+
+struct Paths {
+    static func docPath(fileName: String) -> String? {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentdirectory = paths[0] as! String
+        let path = documentdirectory.stringByAppendingPathComponent(fileName)
+        return path
+    }
+    
+    static func bundlePath(fileName: String) -> String? {
+        if let bundlePath = NSBundle.mainBundle().pathForResource(fileName, ofType: "plist") {
+            return bundlePath
+        } else {
+            return nil
+        }
+    }
+}

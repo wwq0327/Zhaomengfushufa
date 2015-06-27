@@ -24,6 +24,7 @@
 		AD1EF2F41B3A4B4A00B452E3 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F31B3A4B4A00B452E3 /* MainCollectionViewController.swift */; };
 		AD1EF2F61B3A4B9800B452E3 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */; };
 		AD1EF2F91B3AE63B00B452E3 /* BaikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F81B3AE63B00B452E3 /* BaikeViewController.swift */; };
+		AD6646E61B3E44A8004E644D /* Works.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD6646E51B3E44A8004E644D /* Works.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		AD1EF2F31B3A4B4A00B452E3 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD1EF2F81B3AE63B00B452E3 /* BaikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaikeViewController.swift; sourceTree = "<group>"; };
+		AD6646E51B3E44A8004E644D /* Works.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Works.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				AD1EF2F31B3A4B4A00B452E3 /* MainCollectionViewController.swift */,
 				AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */,
 				AD1EF2F81B3AE63B00B452E3 /* BaikeViewController.swift */,
+				AD6646E51B3E44A8004E644D /* Works.plist */,
 			);
 			path = "Zhao Mengfu Shufa";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				AD1EF2C51B3A2EC600B452E3 /* Main.storyboard in Resources */,
 				AD1EF2EA1B3A471700B452E3 /* TpldKhangXiDictTrial.otf in Resources */,
 				AD1EF2E71B3A416600B452E3 /* 兰亭序.jpg in Resources */,
+				AD6646E61B3E44A8004E644D /* Works.plist in Resources */,
 				AD1EF2EC1B3A472400B452E3 /* Wyue-GutiFangsong-NC_deliverable.otf in Resources */,
 				AD1EF2E21B3A2FDE00B452E3 /* xianjufu.jpg in Resources */,
 				AD1EF2CA1B3A2EC600B452E3 /* LaunchScreen.xib in Resources */,

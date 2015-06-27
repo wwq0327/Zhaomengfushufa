@@ -12,22 +12,23 @@ class MainCollectionViewController: UICollectionViewController {
     
     var headerLabel: UILabel!
     
-    let shufalists = [
-        ["name": "归去来辞",    "filename": "xianjufu.jpg"],
-        ["name": "兰亭序", "filename": "兰亭序.jpg"],
-        ["name": "闲居赋",    "filename": "xianjufu.jpg"],
-        ["name": "兰亭序", "filename": "兰亭序.jpg"],
-        ["name": "归去来辞",    "filename": "xianjufu.jpg"],
-        ["name": "兰亭序", "filename": "兰亭序.jpg"],
-        ["name": "归去来辞",    "filename": "xianjufu.jpg"]
-    ]
+    var shufaLists: NSArray!
+    
+//    let shufalists = [
+//        ["name": "归去来辞",    "filename": "xianjufu.jpg"],
+//        ["name": "兰亭序", "filename": "兰亭序.jpg"],
+//        ["name": "闲居赋",    "filename": "xianjufu.jpg"],
+//        ["name": "兰亭序", "filename": "兰亭序.jpg"],
+//        ["name": "归去来辞",    "filename": "xianjufu.jpg"],
+//        ["name": "兰亭序", "filename": "兰亭序.jpg"],
+//        ["name": "归去来辞",    "filename": "xianjufu.jpg"]
+//    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        
-//        self.navigationController?.delegate = self
+        loadData()
 
     }
 
@@ -60,6 +61,26 @@ class MainCollectionViewController: UICollectionViewController {
         self.collectionView?.frame = CGRect(x: 0, y: 0, width: collectionViewWidth, height: itemHeight)
         self.collectionView?.center = CGPoint(x: self.view.frame.size.width/2.0, y: self.view.frame.size.height/2.0)
     }
+    
+    func loadData() {
+        let path: String! = Paths.docPath("Works.plist")
+        
+        let fileManager = NSFileManager.defaultManager()
+        // 判断此文件是否存在
+        if !fileManager.fileExistsAtPath(path) {
+            // 如果不存在，则复制一个
+            if let bundlePath = Paths.bundlePath("Works") {
+                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
+            } else {
+                println("Works.plist not found.")
+            }
+        } else {
+            println("Works.plist already exits at path.")
+//            fileManager.removeItemAtPath(path, error: nil)
+        }
+        
+        shufaLists = NSArray(contentsOfFile: path)
+    }
 }
 
 extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
@@ -73,15 +94,16 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return shufalists.count
+        return shufaLists.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionCellIdentifiers.mainCellIndentifier, forIndexPath: indexPath) as! MainCollectionViewCell
         
         // Configure the cell
-        let name = shufalists[indexPath.row]["name"]
-        cell.labelText = name!
+        
+        let name = shufaLists[indexPath.row].objectForKey("name") as! String
+        cell.labelText = name
         
         return cell
     }
@@ -93,9 +115,10 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let dvc = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.imageViewController) as! ImageViewController
-        var filename = shufalists[indexPath.row]["filename"]!
+        var dict = shufaLists[indexPath.row] as! NSDictionary
         
-        dvc.imageName = filename
+        dvc.info = dict
+        
         self.navigationController?.pushViewController(dvc, animated: true)
     }
 

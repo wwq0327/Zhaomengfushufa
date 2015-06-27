@@ -11,6 +11,7 @@ import UIKit
 class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     var imageName: String!
+    var info: NSDictionary!
     
     var imageView: UIImageView!
     var scrollView: UIScrollView!
@@ -22,7 +23,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageName = info.objectForKey("filename") as! String
+        
         imageView = UIImageView(image: UIImage(named: imageName))
         scrollView = UIScrollView(frame: view.bounds)
         scrollView.backgroundColor = UIColor.yellowColor()
@@ -78,6 +80,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     func baiduBaike() {
         let navBaikeViewController = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.navBaike) as! UINavigationController
+        let webvc = navBaikeViewController.topViewController as! BaikeViewController
+        webvc.info = info
         self.presentViewController(navBaikeViewController, animated: true, completion: nil)
     }
     

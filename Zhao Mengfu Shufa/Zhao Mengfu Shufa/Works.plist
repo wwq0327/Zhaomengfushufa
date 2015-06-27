@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<integer>0</integer>
+		<key>name</key>
+		<string>兰亭集序</string>
+		<key>filename</key>
+		<string>兰亭序.jpg</string>
+		<key>url</key>
+		<string>http://baike.baidu.com/subview/6850/17409557.htm</string>
+		<key>desc</key>
+		<string>一幅好作品</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>闲居赋</string>
+		<key>filename</key>
+		<string>xianjufu.jpg</string>
+		<key>url</key>
+		<string>http://baike.baidu.com/subview/1159635/15199738.htm</string>
+		<key>desc</key>
+		<string>一幅好作品</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>3</integer>
+		<key>name</key>
+		<string>归去来辞</string>
+		<key>filename</key>
+		<string>xianjufu.jpg</string>
+		<key>url</key>
+		<string>http://baike.baidu.com/subview/1159635/15199738.htm</string>
+		<key>desc</key>
+		<string>一幅好作品</string>
+	</dict>
+</array>
+</plist>

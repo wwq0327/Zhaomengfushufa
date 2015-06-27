@@ -11,6 +11,8 @@ import UIKit
 class BaikeViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
+    var site: String!
+    var info: NSDictionary!
     
     @IBAction func closeTapped(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -19,10 +21,12 @@ class BaikeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBarHidden = false
+        // 设置导航上的标题
+        title = info.objectForKey("name") as? String
 
-
-        let url = NSURL(string: "http://baike.baidu.com/view/1101771.htm")
+        site = info.objectForKey("url") as! String
+        
+        let url = NSURL(string: site)
         let request = NSURLRequest(URL: url!)
         
         webView.loadRequest(request)
@@ -32,16 +36,5 @@ class BaikeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
