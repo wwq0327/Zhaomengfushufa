@@ -24,6 +24,7 @@
 		AD1EF2F41B3A4B4A00B452E3 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F31B3A4B4A00B452E3 /* MainCollectionViewController.swift */; };
 		AD1EF2F61B3A4B9800B452E3 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */; };
 		AD1EF2F91B3AE63B00B452E3 /* BaikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F81B3AE63B00B452E3 /* BaikeViewController.swift */; };
+		AD2A9B7B1B4B635D0017784D /* DownTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2A9B7A1B4B635D0017784D /* DownTableViewController.swift */; };
 		AD6646E61B3E44A8004E644D /* Works.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD6646E51B3E44A8004E644D /* Works.plist */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		AD1EF2F31B3A4B4A00B452E3 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD1EF2F81B3AE63B00B452E3 /* BaikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaikeViewController.swift; sourceTree = "<group>"; };
+		AD2A9B7A1B4B635D0017784D /* DownTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownTableViewController.swift; sourceTree = "<group>"; };
 		AD6646E51B3E44A8004E644D /* Works.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Works.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */,
 				AD1EF2F81B3AE63B00B452E3 /* BaikeViewController.swift */,
 				AD6646E51B3E44A8004E644D /* Works.plist */,
+				AD2A9B7A1B4B635D0017784D /* DownTableViewController.swift */,
 			);
 			path = "Zhao Mengfu Shufa";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				AD1EF2E41B3A304400B452E3 /* ImageViewController.swift in Sources */,
 				AD1EF2C01B3A2EC600B452E3 /* Zhao_Mengfu_Shufa.xcdatamodeld in Sources */,
 				AD1EF2F91B3AE63B00B452E3 /* BaikeViewController.swift in Sources */,
+				AD2A9B7B1B4B635D0017784D /* DownTableViewController.swift in Sources */,
 				AD1EF2F21B3A4ADB00B452E3 /* ShufaHelper.swift in Sources */,
 				AD1EF2F41B3A4B4A00B452E3 /* MainCollectionViewController.swift in Sources */,
 			);

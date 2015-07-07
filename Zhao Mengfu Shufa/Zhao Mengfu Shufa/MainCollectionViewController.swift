@@ -11,18 +11,11 @@ import UIKit
 class MainCollectionViewController: UICollectionViewController {
     
     var headerLabel: UILabel!
-    
     var shufaLists: NSArray!
     
-//    let shufalists = [
-//        ["name": "归去来辞",    "filename": "xianjufu.jpg"],
-//        ["name": "兰亭序", "filename": "兰亭序.jpg"],
-//        ["name": "闲居赋",    "filename": "xianjufu.jpg"],
-//        ["name": "兰亭序", "filename": "兰亭序.jpg"],
-//        ["name": "归去来辞",    "filename": "xianjufu.jpg"],
-//        ["name": "兰亭序", "filename": "兰亭序.jpg"],
-//        ["name": "归去来辞",    "filename": "xianjufu.jpg"]
-//    ]
+    // 按钮变量
+//    var buttonsView: UIView!
+    var addButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +47,18 @@ class MainCollectionViewController: UICollectionViewController {
         self.collectionView?.frame = CGRect(x: 0, y: 0, width: collectionViewWidth, height: itemHeight)
         self.collectionView?.center = CGPoint(x: self.view.frame.size.width/2.0, y: self.view.frame.size.height/2.0)
         
+        
+        // 设置添加按钮
+//        buttonsView = UIView(frame: CGRectMake(0, screenRect.height, screenRect.width, 80.0))
+//        buttonsView.backgroundColor = UIColor.clearColor()
+//        buttonsView.alpha = 1.0
+        
+        addButton = fontButtonWith(text: "添", fontSize: 18.0, width: 50.0, normalImageName: "Oval", highlightedImageName: "Oval_pressed")
+        addButton.center = CGPointMake(view.frame.width/2.0, view.frame.height-56.0)
+        addButton.addTarget(self, action: "addImage", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.view.addSubview(addButton)
+        
         self.view.backgroundColor = UIColor.whiteColor()
     }
     
@@ -82,6 +87,11 @@ class MainCollectionViewController: UICollectionViewController {
         
         shufaLists = NSArray(contentsOfFile: path)
     }
+    
+    func addImage() {
+        let navDownImageView = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.navDownTableViewController) as! UINavigationController
+        self.presentViewController(navDownImageView, animated: true, completion: nil)
+    }
 }
 
 extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
@@ -102,9 +112,10 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionCellIdentifiers.mainCellIndentifier, forIndexPath: indexPath) as! MainCollectionViewCell
         
         // Configure the cell
-        
-        let name = shufaLists[indexPath.row].objectForKey("name") as! String
-        cell.labelText = name
+        if shufaLists[indexPath.row].objectForKey("isDown") as! Bool == true {
+            let name = shufaLists[indexPath.row].objectForKey("name") as! String
+            cell.labelText = name
+        }
         
         return cell
     }

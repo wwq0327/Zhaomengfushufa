@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>isDown</key>
+		<true/>
 		<key>id</key>
 		<integer>0</integer>
 		<key>name</key>
@@ -15,6 +17,8 @@
 		<string>一幅好作品</string>
 	</dict>
 	<dict>
+		<key>isDown</key>
+		<true/>
 		<key>id</key>
 		<integer>1</integer>
 		<key>name</key>
@@ -27,6 +31,8 @@
 		<string>一幅好作品</string>
 	</dict>
 	<dict>
+		<key>isDown</key>
+		<true/>
 		<key>id</key>
 		<integer>3</integer>
 		<key>name</key>
@@ -37,6 +43,38 @@
 		<string>http://baike.baidu.com/subview/1159635/15199738.htm</string>
 		<key>desc</key>
 		<string>一幅好作品</string>
+	</dict>
+	<dict>
+		<key>picurl</key>
+		<string>http://www.yingbishufa.com/ldbt/pic/zhaomenfu008_1.jpg</string>
+		<key>isDown</key>
+		<false/>
+		<key>id</key>
+		<integer>4</integer>
+		<key>name</key>
+		<string>行书千字文</string>
+		<key>filename</key>
+		<string>zhaomenfu008_1.jpg</string>
+		<key>url</key>
+		<string>http://baike.baidu.com/view/6730632.htm</string>
+		<key>desc</key>
+		<string>赵孟頫《行书千字文》，绢本，纵二百六十五毫米，横三千七百三十四毫米，藏於故宫博物院。</string>
+	</dict>
+	<dict>
+		<key>picurl</key>
+		<string>http://www.yingbishufa.com/ldbt/pic/zhaomenfu011.jpg</string>
+		<key>isDown</key>
+		<false/>
+		<key>id</key>
+		<integer>5</integer>
+		<key>name</key>
+		<string>秋深贴</string>
+		<key>filename</key>
+		<string>zhaomenfu011.jpg</string>
+		<key>url</key>
+		<string>http://baike.baidu.com/view/151086.htm</string>
+		<key>desc</key>
+		<string>《秋深帖》，元，管道昇（赵孟頫）书，纸本，册页，纵26.9cm，横53.3cm，行书，18行。北京故宫博物馆藏。</string>
 	</dict>
 </array>
 </plist>

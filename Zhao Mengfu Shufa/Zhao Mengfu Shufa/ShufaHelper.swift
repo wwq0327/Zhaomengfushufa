@@ -22,6 +22,7 @@ struct CollectionCellIdentifiers {
 struct StoryboardId {
     static let imageViewController = "ImageViewController"
     static let baikeViewController = "BaikeViewController"
+    static let navDownTableViewController = "NavDownTableViewController"
     static let navBaike = "NavBaike"
 }
 
