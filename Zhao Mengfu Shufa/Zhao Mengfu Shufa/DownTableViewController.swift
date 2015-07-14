@@ -9,15 +9,24 @@
 import UIKit
 
 class DownTableViewController: UITableViewController {
+    
+    var shufaLists: NSArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // 设置行高为自动模式
+        tableView.rowHeight = UITableViewAutomaticDimension
+        // 对Cell高度进行估值
+        tableView.estimatedRowHeight = 100.0
+        
+        // load nib
+        var cellNib = UINib(nibName: "DownTableViewCell", bundle: nil)
+        tableView.registerNib(cellNib, forCellReuseIdentifier: CollectionCellIdentifiers.downCellIndentifier)
+        
+        loadData()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     @IBAction func close(sender: AnyObject) {
@@ -27,30 +36,51 @@ class DownTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func loadData() {
+        let path: String! = Paths.docPath("Works.plist")
+        
+        let fileManager = NSFileManager.defaultManager()
+        // 判断此文件是否存在
+        if !fileManager.fileExistsAtPath(path) {
+            // 如果不存在，则复制一个
+            if let bundlePath = Paths.bundlePath("Works") {
+                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
+            } else {
+                println("Works.plist not found.")
+            }
+        } else {
+            println("Works.plist already exits at path.")
+            // 调试时，用于删除复制到目录中的文件。
+            //            fileManager.removeItemAtPath(path, error: nil)
+        }
+        
+        shufaLists = NSArray(contentsOfFile: path)
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return shufaLists.count
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
-        // Configure the cell...
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(CollectionCellIdentifiers.downCellIndentifier, forIndexPath: indexPath) as! DownTableViewCell
+        
+        cell.imageName.text = shufaLists[indexPath.row].objectForKey("name") as? String
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

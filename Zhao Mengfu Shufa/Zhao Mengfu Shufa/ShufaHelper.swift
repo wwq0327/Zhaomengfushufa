@@ -17,6 +17,7 @@ let collectionViewWidth = itemWidth * 5 // 同时显示三个Cell的时候
 
 struct CollectionCellIdentifiers {
     static let mainCellIndentifier = "MainCollectionViewCell"
+    static let downCellIndentifier = "DownImageCell"
 }
 
 struct StoryboardId {

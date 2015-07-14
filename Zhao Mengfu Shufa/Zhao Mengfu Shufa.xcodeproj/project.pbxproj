@@ -25,6 +25,8 @@
 		AD1EF2F61B3A4B9800B452E3 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */; };
 		AD1EF2F91B3AE63B00B452E3 /* BaikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF2F81B3AE63B00B452E3 /* BaikeViewController.swift */; };
 		AD2A9B7B1B4B635D0017784D /* DownTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2A9B7A1B4B635D0017784D /* DownTableViewController.swift */; };
+		AD2A9B7F1B4B7CDC0017784D /* DownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2A9B7D1B4B7CDC0017784D /* DownTableViewCell.swift */; };
+		AD2A9B801B4B7CDC0017784D /* DownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2A9B7E1B4B7CDC0017784D /* DownTableViewCell.xib */; };
 		AD6646E61B3E44A8004E644D /* Works.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD6646E51B3E44A8004E644D /* Works.plist */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD1EF2F81B3AE63B00B452E3 /* BaikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaikeViewController.swift; sourceTree = "<group>"; };
 		AD2A9B7A1B4B635D0017784D /* DownTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownTableViewController.swift; sourceTree = "<group>"; };
+		AD2A9B7D1B4B7CDC0017784D /* DownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownTableViewCell.swift; sourceTree = "<group>"; };
+		AD2A9B7E1B4B7CDC0017784D /* DownTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownTableViewCell.xib; sourceTree = "<group>"; };
 		AD6646E51B3E44A8004E644D /* Works.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Works.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +107,7 @@
 		AD1EF2B91B3A2EC600B452E3 /* Zhao Mengfu Shufa */ = {
 			isa = PBXGroup;
 			children = (
+				AD2A9B7C1B4B7CBF0017784D /* Cell */,
 				AD1EF2E31B3A304400B452E3 /* ImageViewController.swift */,
 				AD1EF2C31B3A2EC600B452E3 /* Main.storyboard */,
 				AD1EF2E81B3A470100B452E3 /* Fonts */,
@@ -112,7 +117,6 @@
 				AD1EF2EF1B3A4A9600B452E3 /* ShufaLayout.swift */,
 				AD1EF2F11B3A4ADB00B452E3 /* ShufaHelper.swift */,
 				AD1EF2F31B3A4B4A00B452E3 /* MainCollectionViewController.swift */,
-				AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */,
 				AD1EF2F81B3AE63B00B452E3 /* BaikeViewController.swift */,
 				AD6646E51B3E44A8004E644D /* Works.plist */,
 				AD2A9B7A1B4B635D0017784D /* DownTableViewController.swift */,
@@ -167,6 +171,16 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		AD2A9B7C1B4B7CBF0017784D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AD1EF2F51B3A4B9800B452E3 /* MainCollectionViewCell.swift */,
+				AD2A9B7D1B4B7CDC0017784D /* DownTableViewCell.swift */,
+				AD2A9B7E1B4B7CDC0017784D /* DownTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +225,7 @@
 		AD1EF2AF1B3A2EC600B452E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Wanqing Wang";
 				TargetAttributes = {
@@ -250,6 +265,7 @@
 				AD1EF2C51B3A2EC600B452E3 /* Main.storyboard in Resources */,
 				AD1EF2EA1B3A471700B452E3 /* TpldKhangXiDictTrial.otf in Resources */,
 				AD1EF2E71B3A416600B452E3 /* 兰亭序.jpg in Resources */,
+				AD2A9B801B4B7CDC0017784D /* DownTableViewCell.xib in Resources */,
 				AD6646E61B3E44A8004E644D /* Works.plist in Resources */,
 				AD1EF2EC1B3A472400B452E3 /* Wyue-GutiFangsong-NC_deliverable.otf in Resources */,
 				AD1EF2E21B3A2FDE00B452E3 /* xianjufu.jpg in Resources */,
@@ -277,6 +293,7 @@
 				AD1EF2BD1B3A2EC600B452E3 /* AppDelegate.swift in Sources */,
 				AD1EF2F61B3A4B9800B452E3 /* MainCollectionViewCell.swift in Sources */,
 				AD1EF2E41B3A304400B452E3 /* ImageViewController.swift in Sources */,
+				AD2A9B7F1B4B7CDC0017784D /* DownTableViewCell.swift in Sources */,
 				AD1EF2C01B3A2EC600B452E3 /* Zhao_Mengfu_Shufa.xcdatamodeld in Sources */,
 				AD1EF2F91B3AE63B00B452E3 /* BaikeViewController.swift in Sources */,
 				AD2A9B7B1B4B635D0017784D /* DownTableViewController.swift in Sources */,
