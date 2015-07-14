@@ -17,7 +17,7 @@ let collectionViewWidth = itemWidth * 5 // 同时显示三个Cell的时候
 
 struct CollectionCellIdentifiers {
     static let mainCellIndentifier = "MainCollectionViewCell"
-    static let downCellIndentifier = "DownImageCell"
+    static let downCellIndentifier = "DownTableViewCell"
 }
 
 struct StoryboardId {
@@ -28,15 +28,17 @@ struct StoryboardId {
 }
 
 // 创建自定义按钮
-func fontButtonWith(#text: String, #fontSize: CGFloat, #width: CGFloat, #normalImageName: String, #highlightedImageName: String) -> UIButton {
-    var button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+func fontButtonWith(text text: String, fontSize: CGFloat, width: CGFloat, normalImageName: String, highlightedImageName: String) -> UIButton {
+//    var button = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+    let button = UIButton(type: UIButtonType.Custom) as UIButton
     
     button.frame = CGRectMake(0, 0, width, width)
-    var font = UIFont(name: "Wyue-GutiFangsong-NC", size: fontSize) as UIFont!
+    let font = UIFont(name: "Wyue-GutiFangsong-NC", size: fontSize) as UIFont!
     
-    let textAttributes: [NSObject: AnyObject] = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
+    let textAttributes: [String: AnyObject] = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
     
-    var attributedText = NSAttributedString(string: text, attributes: textAttributes)
+    let attributedText = NSAttributedString(string: text, attributes: textAttributes)
+
     button.setAttributedTitle(attributedText, forState: UIControlState.Normal)
     
     // 按钮的正常图片背景及高亮背景

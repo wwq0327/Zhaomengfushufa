@@ -8,13 +8,14 @@
 
 import UIKit
 
+let ENDNUM = 3
+
 class MainCollectionViewController: UICollectionViewController {
     
     var headerLabel: UILabel!
     var shufaLists: NSArray!
     
     // 按钮变量
-//    var buttonsView: UIView!
     var addButton: UIButton!
 
     override func viewDidLoad() {
@@ -40,18 +41,12 @@ class MainCollectionViewController: UICollectionViewController {
         
         
         // 设置 Cell 的layout
-        var mainLayout = ShufaLayout()
+        let mainLayout = ShufaLayout()
         mainLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         self.collectionView?.setCollectionViewLayout(mainLayout, animated: false)
         
         self.collectionView?.frame = CGRect(x: 0, y: 0, width: collectionViewWidth, height: itemHeight)
         self.collectionView?.center = CGPoint(x: self.view.frame.size.width/2.0, y: self.view.frame.size.height/2.0)
-        
-        
-        // 设置添加按钮
-//        buttonsView = UIView(frame: CGRectMake(0, screenRect.height, screenRect.width, 80.0))
-//        buttonsView.backgroundColor = UIColor.clearColor()
-//        buttonsView.alpha = 1.0
         
         addButton = fontButtonWith(text: "添", fontSize: 18.0, width: 50.0, normalImageName: "Oval", highlightedImageName: "Oval_pressed")
         addButton.center = CGPointMake(view.frame.width/2.0, view.frame.height-56.0)
@@ -75,17 +70,23 @@ class MainCollectionViewController: UICollectionViewController {
         if !fileManager.fileExistsAtPath(path) {
             // 如果不存在，则复制一个
             if let bundlePath = Paths.bundlePath("Works") {
-                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
+                do {
+                    try fileManager.copyItemAtPath(bundlePath, toPath: path)
+                } catch _ {
+                }
             } else {
-                println("Works.plist not found.")
+                print("Works.plist not found.")
             }
         } else {
-            println("Works.plist already exits at path.")
+            print("Works.plist already exits at path.")
             // 调试时，用于删除复制到目录中的文件。
 //            fileManager.removeItemAtPath(path, error: nil)
         }
         
-        shufaLists = NSArray(contentsOfFile: path)
+        let _shufaLists = NSArray(contentsOfFile: path)
+        // 过滤已默认已有的作品图片
+        shufaLists = _shufaLists!.filter({ $0.objectForKey("isDown") as! Bool }) as NSArray
+
     }
     
     func addImage() {
@@ -108,15 +109,14 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
         return shufaLists.count
     }
     
+    // 读取数据，如果数据中的isDown为false的话，则不在一张视图中显示
+    // 这里只需要显示为true有的即可。
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionCellIdentifiers.mainCellIndentifier, forIndexPath: indexPath) as! MainCollectionViewCell
         
-        // Configure the cell
-        if shufaLists[indexPath.row].objectForKey("isDown") as! Bool == true {
-            let name = shufaLists[indexPath.row].objectForKey("name") as! String
-            cell.labelText = name
-        }
-        
+        let name = shufaLists[indexPath.row].objectForKey("name") as! String
+        cell.labelText = name
+     
         return cell
     }
     
@@ -125,10 +125,12 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
 //        return UIEdgeInsetsMake(0, leftRightMagrin, 0, leftRightMagrin);
 //    }
     
+    // 点击则进入相应的作品视图中
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let dvc = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardId.imageViewController) as! ImageViewController
-        var dict = shufaLists[indexPath.row] as! NSDictionary
+        let dict = shufaLists[indexPath.row] as! NSDictionary
         
+        // 将作品的信息传递给子视图
         dvc.info = dict
         
         self.navigationController?.pushViewController(dvc, animated: true)

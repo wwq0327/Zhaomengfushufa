@@ -20,7 +20,7 @@ class MainCollectionViewCell: UICollectionViewCell {
     var textInt: Int = 0
     
     override func awakeFromNib() {
-        var lineHeight: CGFloat = 5.0
+        let lineHeight: CGFloat = 5.0
         self.textLabel = FontLabel(fontname: "Wyue-GutiFangsong-NC", labelText: labelText, fontSize: 18.0, lineHeight: lineHeight)
         
         self.addSubview(textLabel)

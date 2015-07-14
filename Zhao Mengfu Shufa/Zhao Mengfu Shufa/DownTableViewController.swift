@@ -19,10 +19,10 @@ class DownTableViewController: UITableViewController {
         // 设置行高为自动模式
         tableView.rowHeight = UITableViewAutomaticDimension
         // 对Cell高度进行估值
-        tableView.estimatedRowHeight = 100.0
+        tableView.estimatedRowHeight = 44.0
         
         // load nib
-        var cellNib = UINib(nibName: "DownTableViewCell", bundle: nil)
+        let cellNib = UINib(nibName: CollectionCellIdentifiers.downCellIndentifier, bundle: nil)
         tableView.registerNib(cellNib, forCellReuseIdentifier: CollectionCellIdentifiers.downCellIndentifier)
         
         loadData()
@@ -45,17 +45,21 @@ class DownTableViewController: UITableViewController {
         if !fileManager.fileExistsAtPath(path) {
             // 如果不存在，则复制一个
             if let bundlePath = Paths.bundlePath("Works") {
-                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
+                do {
+                    try fileManager.copyItemAtPath(bundlePath, toPath: path)
+                } catch _ {
+                }
             } else {
-                println("Works.plist not found.")
+                print("Works.plist not found.")
             }
         } else {
-            println("Works.plist already exits at path.")
+            print("Works.plist already exits at path.")
             // 调试时，用于删除复制到目录中的文件。
             //            fileManager.removeItemAtPath(path, error: nil)
         }
         
-        shufaLists = NSArray(contentsOfFile: path)
+        let _shufaLists = NSArray(contentsOfFile: path)
+        shufaLists = _shufaLists!.filter({ $0.objectForKey("isDown") as! Bool == false }) as NSArray
     }
 
     // MARK: - Table view data source
@@ -126,5 +130,10 @@ class DownTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // 行高设置
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 211.0
+    }
 
 }

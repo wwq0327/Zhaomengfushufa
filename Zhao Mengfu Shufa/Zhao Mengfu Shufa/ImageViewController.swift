@@ -29,7 +29,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         scrollView = UIScrollView(frame: view.bounds)
         scrollView.backgroundColor = UIColor.yellowColor()
         scrollView.contentSize = imageView.bounds.size
-        scrollView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        scrollView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         
         // 设置原点位置
         scrollView.contentOffset = CGPoint(x: 1000, y: 450)
